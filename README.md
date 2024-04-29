@@ -13,6 +13,5 @@
 # playgrandJava
 
    Dedicado a estudos e experiencia realizados no Boot Camp  Santander 2024 - Backend com Java. 
-   Organizado por,DIO Digital Inavation One
-   [DIO Digital Inavation One](https://www.dio.me)    
+   Organizado por [DIO Digital Inavation One](https://www.dio.me)    
 
