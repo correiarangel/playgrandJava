@@ -1,3 +1,4 @@
+package br.com.start.myclassstart;
 
 public class MyClassStart {
     private String name;

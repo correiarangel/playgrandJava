@@ -1,3 +1,6 @@
+package br.com.start.main;
+import br.com.start.myclassstart.MyClassStart;
+import br.com.start.studentnewletter.StudentNewsletter;
 
 public class Main {
     public static void main(String[] args) {

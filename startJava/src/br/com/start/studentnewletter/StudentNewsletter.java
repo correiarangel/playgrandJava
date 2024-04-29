@@ -1,3 +1,4 @@
+package br.com.start.studentnewletter;
 public class StudentNewsletter {
     private float noteOne;
     private float noteTwo;
