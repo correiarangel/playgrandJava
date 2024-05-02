@@ -6,14 +6,16 @@ import br.com.banco.conta.Conta;
 
 public class CriarConta {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Conta conta = criar();
+
+        if(conta.getNumero() == -1) return;
         showConta(conta);
     }
 
-    public static Conta criar() {
+    public static Conta criar() throws Exception {
         Conta conta = new Conta();
-        @SuppressWarnings("resource")
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("-------------------------------");
         System.out.println("");
@@ -27,9 +29,36 @@ public class CriarConta {
         String agencia = scanner.nextLine();
         conta.setAgencia(agencia);
 
+        try {
+            conta = getConta(conta, scanner);
+        } catch (Exception e) {
+            System.out.println("Digite numeros validos para conta \n");
+            conta.setNumero(-1);
+            return conta;
+        }
+
+        try {
+
+            conta = getSaldo(conta, scanner);
+        } catch (Exception e) {
+            System.out.println("Digite numeros validos \n");
+            conta.setNumero(-1);
+            return conta;
+        }
+
+        return conta;
+    }
+
+    public static Conta getConta(Conta conta, Scanner scanner) {
+
         System.out.println("Digite o numero da conta ex. 250005: ");
         int numeroConta = scanner.nextInt();
         conta.setNumero(numeroConta);
+
+        return conta;
+    }
+
+    public static Conta getSaldo(Conta conta, Scanner scanner) {
 
         System.out.println("Digite seu Saldo ex. 1254,88: ");
         double saldo = scanner.nextDouble();
