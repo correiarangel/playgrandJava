@@ -55,7 +55,7 @@ public class Counter {
             e.printStackTrace();
         }
     }
-
+}
        /*  static void menu(Scanner cli) {
         String imputOne = "";
         boolean run = true;
@@ -88,4 +88,4 @@ public class Counter {
         }
 
     } */
-}
+
