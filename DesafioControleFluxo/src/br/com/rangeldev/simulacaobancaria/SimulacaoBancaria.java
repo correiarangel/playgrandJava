@@ -1,4 +1,4 @@
-package br.com.rangeldev.exception.simulacaobancaria;
+package br.com.rangeldev.simulacaobancaria;
 
 import java.util.Scanner;
 
