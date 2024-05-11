@@ -3,6 +3,7 @@ package br.com.rangeldev.verificadornumeroconta;
 import java.util.Scanner;
 
 public class VerificadorNumeroConta {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
