@@ -2,21 +2,22 @@ package br.com.banco.criarconta;
 
 import java.util.Scanner;
 
-import br.com.banco.conta.Conta;
+import br.com.banco.contamodel.ContaModel;
 
-public class CriarConta {
+public class CriarConta implements ICriarConta {
+    // Note que implemento a interface ICriarConta
+    // pocibilita inverção de dependencia se precisar de CriarConta 
+    // intacimos ICriarConta assim dependo de um interface e nã de uma implementação 
+    private final Scanner scanner;  //injeta Scanner no construtor -> injeção de dependencia
 
-    public static void main(String[] args) throws Exception {
-        Conta conta = criar();
-
-        if(conta.getNumero() == -1) return;
-        showConta(conta);
+    public CriarConta(Scanner scanner) {
+        this.scanner = scanner;
     }
 
-    public static Conta criar() throws Exception {
-        Conta conta = new Conta();
+    @Override
+    public ContaModel criar() throws Exception {
+        ContaModel conta = new ContaModel();
 
-        Scanner scanner = new Scanner(System.in);
         System.out.println("-------------------------------");
         System.out.println("");
         System.out.println("Bem Vindo vamos abrir sua conta");
@@ -29,51 +30,58 @@ public class CriarConta {
         String agencia = scanner.nextLine();
         conta.setAgencia(agencia);
 
-        try {
             conta = getConta(conta, scanner);
-        } catch (Exception e) {
-            System.out.println("Digite numeros validos para conta \n");
-            conta.setNumero(-1);
-            return conta;
-        }
-
-        try {
-
+            if(conta.getNumero() ==-1){
+                System.out.println("OPS! falha ou criar conta utilize apenas numeros para conta.");
+                return conta;
+            }
+            
             conta = getSaldo(conta, scanner);
-        } catch (Exception e) {
-            System.out.println("Digite numeros validos \n");
-            conta.setNumero(-1);
-            return conta;
-        }
+            if(conta.getSaldo() ==-1){
+                System.out.println("OPS! falha ou criar conta utilize apenas numeros para saldo.");
+                return conta;
+            }
+
 
         return conta;
     }
 
-    public static Conta getConta(Conta conta, Scanner scanner) {
+    @Override
+    public ContaModel getConta(ContaModel conta, Scanner scanner) {
 
         System.out.println("Digite o numero da conta ex. 250005: ");
-        int numeroConta = scanner.nextInt();
-        conta.setNumero(numeroConta);
+        try {
+            int numeroConta = scanner.nextInt();
+            conta.setNumero(numeroConta);
+        } catch (Exception e) {
+            System.out.println(" ERRO : " + e.getMessage());
+            conta.setNumero(-1);
+        }
 
         return conta;
     }
 
-    public static Conta getSaldo(Conta conta, Scanner scanner) {
+    public ContaModel getSaldo(ContaModel conta, Scanner scanner) {
 
         System.out.println("Digite seu Saldo ex. 1254,88: ");
-        double saldo = scanner.nextDouble();
-        conta.setSaldo(saldo);
+
+        try {
+            double saldo = scanner.nextDouble();
+            conta.setSaldo(saldo);
+        } catch (Exception e) {
+            conta.setSaldo(-1);
+            System.out.println("ERRO : " + e.getMessage());
+        }
+
         return conta;
 
     }
 
-    public static void showConta(Conta conta) {
+    @Override
+    public void showConta(ContaModel conta) {
         System.out.println("Olá " + conta.getClienteName() + ", obrigado por criar uma conta em nosso banco.");
         System.out.println("Sua agência é " + conta.getAgencia() + ", conta " + conta.getAgencia());
         System.out.println("Seu saldo R$:" + conta.getSaldo() + " já está disponível para saque");
     }
 
 }
-
-
-

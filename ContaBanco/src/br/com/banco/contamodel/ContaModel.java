@@ -1,6 +1,6 @@
-package br.com.banco.conta;
+package br.com.banco.contamodel;
 
-public class Conta {
+public class ContaModel {
     
     private int numero;
     private String agencia;
@@ -40,3 +40,4 @@ public class Conta {
     }
 
 }
+
