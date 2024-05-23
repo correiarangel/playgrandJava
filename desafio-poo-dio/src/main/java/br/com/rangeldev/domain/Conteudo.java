@@ -1,4 +1,4 @@
-package br.comrangeldev.domain;
+package br.com.rangeldev.domain;
 
 public abstract class Conteudo {
 

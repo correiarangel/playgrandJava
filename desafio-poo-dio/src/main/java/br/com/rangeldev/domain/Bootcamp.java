@@ -1,4 +1,4 @@
-package br.comrangeldev.domain;
+package br.com.rangeldev.domain;
 
 import java.time.LocalDate;
 import java.util.HashSet;

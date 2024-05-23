@@ -1,4 +1,4 @@
-package br.comrangeldev.domain;
+package br.com.rangeldev.domain;
 
 import java.time.LocalDate;
 
@@ -9,9 +9,6 @@ public class Mentoria extends Conteudo{
     @Override
     public double calcularXp() {
         return XP_PADRAO + 20d;
-    }
-
-    public Mentoria() {
     }
 
     public LocalDate getData() {
