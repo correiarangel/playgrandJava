@@ -1,3 +1,10 @@
+### Olá seja bem vindo ;]  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
+![](https://visitor-badge.glitch.me/badge?page_id=correiarangel)
+
+[Linkedin Always On](https://www.linkedin.com/in/marcos-fabiano-correia-rangel/)
+
+[GitHub](https://github.com/correiarangel) 
+
 ## POO - Desafio
    Modelagem e diagramação da representação em UML e Código no que se refere ao componente iPhone.
 

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class VerificadorNumeroConta {
 
-    void VerificadorNumeroConta(){}
    
     @SuppressWarnings("unused")
     public static void main(String[] args) {

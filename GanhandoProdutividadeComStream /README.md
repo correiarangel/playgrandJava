@@ -1,3 +1,10 @@
+### Olá seja bem vindo ;]  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
+![](https://visitor-badge.glitch.me/badge?page_id=correiarangel)
+
+[Linkedin Always On](https://www.linkedin.com/in/marcos-fabiano-correia-rangel/)
+
+[GitHub](https://github.com/correiarangel) 
+
 # Ganhando Produtividade com Stream API e Java
 
 - A Streams API traz uma nova opção para a manipulação de coleções em Java seguindo os princípios da programação funcional.

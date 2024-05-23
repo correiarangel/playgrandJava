@@ -1,3 +1,10 @@
+### Olá seja bem vindo ;]  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
+![](https://visitor-badge.glitch.me/badge?page_id=correiarangel)
+
+[Linkedin Always On](https://www.linkedin.com/in/marcos-fabiano-correia-rangel/)
+
+[GitHub](https://github.com/correiarangel) 
+
 ## Criando um Banco Digital com Java e Orientação a Objetos
 
 ## 19/05/2024 - [Mentoria #1: Tire Suas Dúvidas Sobre Orientação a Objetos](https://www.youtube.com/watch?v=YS6ouOhkyNI)
