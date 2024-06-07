@@ -1,23 +1,22 @@
 package br.com.rangeldev.external.datasource;
 
+import java.util.concurrent.CompletableFuture;
 import br.com.rangeldev.domain.Email;
-import br.com.rangeldev.domain.Formato;
-import br.com.rangeldev.repositories.PlataformaDeEnvio;
 
-public class EnvioEmailDatasource {
+public class EnvioEmailDatasource implements IEnvioEmailDatasource {
 
-    private PlataformaDeEnvio plataforma;
+    @Override
+    public CompletableFuture<Email> enviaEmail(Email email) {
+        return CompletableFuture.supplyAsync(() -> {
 
-    void enviaEmail(String enderecoEmail, String mensagem, boolean formatoHtml) {
+            try {
+                // Simulando tempo de espera de 3 segundos
+                Thread.sleep(3000);
+                return email;
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
 
-        Email email = null;
-
-        if(formatoHtml) {
-            email = new Email(enderecoEmail, mensagem, Formato.HTML);
-        }else{
-            email = new Email(enderecoEmail, mensagem, Formato.TEXTO);
-        }
-
-        plataforma.enviaEmail(email);
+        });
     }
 }

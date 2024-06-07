@@ -14,7 +14,7 @@ public class ApiCorreiosDatasource implements IApiCorreiosDatasource {
                 // Simulando tempo de espera de 3 segundos
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
             // Retornando dados simulados
             return new DadosLocalizacao("SP", "São Paulo", "Avenida Paulista", "1234", "Bela Vista");

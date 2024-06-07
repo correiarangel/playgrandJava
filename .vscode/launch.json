@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootWebSwaggerApplication<springboot-web-swagger>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.rangeldev.springboot_web_swagger.SpringbootWebSwaggerApplication",
+            "projectName": "springboot-web-swagger",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
